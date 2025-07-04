@@ -5,24 +5,24 @@ const SocialMedia = () => {
   const socialLinks = [
     {
       platform: 'Facebook',
-      username: 'Fatima DIDOUH',
-      url: 'https://facebook.com/fatima.didouh',
+      username: 'Couisin Chaf',
+      url: 'https://www.facebook.com/share/1C1Bzg5SLK/?mibextid=wwXIfr',
       icon: Facebook,
       color: 'from-blue-600 to-blue-700',
       hoverColor: 'hover:from-blue-700 hover:to-blue-800'
     },
     {
       platform: 'Instagram',
-      username: '@fatima.didouh',
-      url: '#',
+      username: '@couisin_chaf',
+      url: 'https://www.instagram.com/couisin_chaf?igsh=MXNtdjU4eHZtcHJ1NA%3D%3D&utm_source=qr',
       icon: Instagram,
       color: 'from-pink-600 to-purple-600',
       hoverColor: 'hover:from-pink-700 hover:to-purple-700'
     },
     {
       platform: 'TikTok',
-      username: '@fatima.didouh',
-      url: '#',
+      username: '@fatimaddh7',
+      url: 'https://www.tiktok.com/@fatimaddh7?_t=ZS-8xklArmbify&_r=1',
       icon: Video,
       color: 'from-gray-800 to-gray-900',
       hoverColor: 'hover:from-gray-900 hover:to-black'

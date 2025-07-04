@@ -50,21 +50,16 @@ const Hero = () => {
 
           {/* Image/Visual Content */}
           <div className="relative">
-            <div className="relative w-full h-96 lg:h-[500px] bg-gradient-to-br from-amber-200 to-rose-200 rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-700">
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-600/20 to-rose-600/20"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <ChefHat className="text-white mx-auto" size={80} />
-                  <p className="text-white text-lg font-semibold">
-                    الحلويات التقليدية المغربية
-                  </p>
-                </div>
-              </div>
+            <div className="relative w-full h-96 lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-700">
+              <img
+                src="images/profil.png"
+                alt="Moroccan Traditional Sweets"
+                className="w-full h-full object-cover"
+              />
+              {/* Decorative Elements */}
+              <div className="absolute -top-6 -right-6 w-24 h-24 bg-amber-300 rounded-full opacity-70 animate-pulse"></div>
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-rose-300 rounded-full opacity-50 animate-pulse animation-delay-2000"></div>
             </div>
-            
-            {/* Decorative Elements */}
-            <div className="absolute -top-6 -right-6 w-24 h-24 bg-amber-300 rounded-full opacity-70 animate-pulse"></div>
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-rose-300 rounded-full opacity-50 animate-pulse animation-delay-2000"></div>
           </div>
         </div>
       </div>

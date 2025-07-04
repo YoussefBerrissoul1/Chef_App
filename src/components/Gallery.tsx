@@ -4,6 +4,7 @@ import { Play, Camera, ZoomIn } from 'lucide-react';
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const scrollRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false); // État pour gérer la pause
 
   const galleryItems = [
     { id: 1, src: '/images/1.jpg', title: 'حلوى مغربية أصيلة' },
@@ -27,7 +28,7 @@ const Gallery = () => {
     let animationFrameId;
 
     const scroll = () => {
-      if (scrollContainer) {
+      if (scrollContainer && !isPaused) { // Vérifie si la pause n'est pas activée
         scrollContainer.scrollLeft += 1;
         if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
           scrollContainer.scrollLeft = 0;
@@ -41,7 +42,11 @@ const Gallery = () => {
     return () => {
       cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [isPaused]); // Ajout de isPaused comme dépendance
+
+  // Gestion des événements de survol
+  const handleMouseEnter = () => setIsPaused(true);
+  const handleMouseLeave = () => setIsPaused(false);
 
   return (
     <section id="gallery" className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
@@ -56,6 +61,8 @@ const Gallery = () => {
               ref={scrollRef}
               className="flex whitespace-nowrap"
               style={{ width: 'max-content' }}
+              onMouseEnter={handleMouseEnter} // Pause au survol
+              onMouseLeave={handleMouseLeave} // Reprise au départ du survol
             >
               {/* Répétition infinie des images */}
               {[...galleryItems, ...galleryItems].map((item, index) => (
